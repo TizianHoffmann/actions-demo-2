@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    name: Example calling an action from different repo
+    steps:
+      - uses: actions/checkout@v3
+      - id: foo
+        uses: TizianHoffmann/actions-demo/docker-action/action.yaml@dev-docker
+        with:
+          my_input: 'Input from elsewhere'
