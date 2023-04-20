@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: foo
-        uses: TizianHoffmann/actions-demo/docker-action@dev-docker
+        uses: TizianHoffmann/actions-demo/my-simple-action@dev-composite-action
         with:
-          my_input: 'Input from elsewhere'
+          message: 'Input from elsewhere'
